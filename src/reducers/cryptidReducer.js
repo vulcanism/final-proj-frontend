@@ -1,5 +1,12 @@
 export default function cryptidReducer(state = {sightings: []}, action ) {
 
-    return state
+    switch (action.type) {
+        case "FETCH_CRYPTIDS":
+            return {cryptids: action.payload}
+
+    
+        default:
+            return state
+    }    
 
 }
