@@ -1,4 +1,6 @@
 import React from "react";
+import {connect} from "react-redux";
+import addCryptid from "./actions/addCryptid";
 
 class CryptidForm extends React.Component {
 
@@ -16,6 +18,7 @@ class CryptidForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        this.props.addCryptid(this.state)
     }
 
     render() {
@@ -39,4 +42,4 @@ class CryptidForm extends React.Component {
     }
 }
 
-export default CryptidForm
+export default connect(null, {addCryptid})(CryptidForm)
