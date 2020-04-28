@@ -8,6 +8,8 @@ export const addCryptid = (data) => {
             method: "POST",
             body: JSON.stringify(data)
         })
+        .then(response => response.json())
+        .then(cryptid => dispatch({type: "ADD_CRYPTID", payload: cryptid}))
     }
 
 }
