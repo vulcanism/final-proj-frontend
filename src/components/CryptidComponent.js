@@ -1,19 +1,19 @@
 import React from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import Cryptid from "./CryptidShow"
 
-class CryptidComponent extends React.Component {
-    render() {
+const CryptidComponent = (props) => {
+    
         return (
             <div>
                 <h2>Cryptids</h2>
-                    {this.props.cryptids.map(cryptid =>
-                        <div key={cryptid.id}>
-                            <Link to={`/cryptids/${cryptid.id}`}><h3>{cryptid.name}</h3></Link>
-                        </div>)}                
+                    {props.cryptids.map(cryptid =>                        
+                            <div key={cryptid.id}><Cryptid cryptid={cryptid} /></div>
+                    )}                
             </div>
         )
-    }
+    
 }
 
 export default connect()(CryptidComponent)
