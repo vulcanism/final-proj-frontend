@@ -1,6 +1,6 @@
 export const addCryptid = (data) => {
     return (dispatch) => {
-        fetch("http://localhost:3000/cryptids", {
+        fetch("http://localhost:3001/cryptids", {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"

@@ -1,8 +1,8 @@
 import React from "react";
 import {connect} from "react-redux";
-import CryptidComponent from "./components/CryptidComponent";
-import CryptidForm from "./components/CryptidForm";
-import {fetchCryptids} from "./actions/fetchCryptids";
+import CryptidComponent from "../components/CryptidComponent";
+import CryptidForm from "../components/CryptidForm";
+import {fetchCryptids} from "../actions/fetchCryptids";
 
 class CryptidsContainer extends React.Component {
 
