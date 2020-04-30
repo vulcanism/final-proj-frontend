@@ -8,9 +8,9 @@ const CryptidComponent = (props) => {
         return (
             <div>
                 <h2>Cryptids</h2>
-                    {props.cryptids.map(cryptid =>                        
+                    {/* {props.cryptids.map(cryptid =>                        
                             <div key={cryptid.id}><Cryptid cryptid={cryptid} /></div>
-                    )}                
+                    )}                 */}
             </div>
         )
     
