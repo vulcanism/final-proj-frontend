@@ -28,4 +28,8 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchCryptids})(CryptidsContainer)
+const mapDispatchToProps = (dispatch) => ({
+    fetchCryptids: () => dispatch(fetchCryptids())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CryptidsContainer)

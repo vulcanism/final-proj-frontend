@@ -1,4 +1,4 @@
-export default function cryptidReducer(state = {cryptids: []}, action ) {
+export default function cryptidReducer(state = {cryptids: []}, action ) {    
 
     switch (action.type) {
         case "FETCH_CRYPTIDS":
