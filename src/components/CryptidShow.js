@@ -4,7 +4,7 @@ const CryptidShow = (props) => {
 
     return (
         <li>
-            {props.cryptid.name}
+            Cryptid Name
         </li>
     )
 }

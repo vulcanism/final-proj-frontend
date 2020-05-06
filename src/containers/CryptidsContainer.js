@@ -1,8 +1,10 @@
 import React from "react";
 import {connect} from "react-redux";
-import CryptidComponent from "../components/CryptidComponent";
-import CryptidForm from "../components/CryptidForm";
 import {fetchCryptids} from "../actions/fetchCryptids";
+
+import Cryptids from "../components/Cryptids";
+import CryptidForm from "../components/CryptidForm";
+import CryptidShow from "../components/CryptidShow";
 
 class CryptidsContainer extends React.Component {
 
@@ -13,7 +15,7 @@ class CryptidsContainer extends React.Component {
     render() {
         return (
             <div>
-                <CryptidComponent cryptids={this.props.cryptids} />
+                <Cryptids cryptids={this.props.cryptids} />
                 <CryptidForm />
             </div>
         )
