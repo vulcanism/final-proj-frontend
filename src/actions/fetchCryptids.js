@@ -4,7 +4,7 @@ export function fetchCryptids() {
         .then(response => response.json())
         .then(cryptids => dispatch({
             type: "FETCH_CRYPTIDS",
-            payload: cryptids.data
+            payload: cryptids
         }))
     }
 }

@@ -8,7 +8,7 @@ const Cryptids = (props) => {
         return (            
             <div>
                 <h2>Cryptids</h2>
-                {props.cryptids.map(cryptid => <li key={cryptid.id}>{cryptid.attributes.name}</li> )}                    
+                {props.cryptids.map(cryptid => <li key={cryptid.id}>{cryptid.name}</li> )}                    
             </div>
         )
     
