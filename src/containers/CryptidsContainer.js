@@ -4,7 +4,7 @@ import {fetchCryptids} from "../actions/fetchCryptids";
 
 import Cryptids from "../components/Cryptids";
 import CryptidForm from "../components/CryptidForm";
-import CryptidShow from "../components/CryptidShow";
+import Cryptid from "../components/Cryptid";
 
 class CryptidsContainer extends React.Component {
 
