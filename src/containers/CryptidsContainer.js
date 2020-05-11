@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {fetchCryptids} from "../actions/fetchCryptids";
+import {Route} from "react-router-dom"
 
 import Cryptids from "../components/Cryptids";
 import CryptidForm from "../components/CryptidForm";
@@ -15,8 +16,8 @@ class CryptidsContainer extends React.Component {
     render() {
         return (
             <div>
-                <Cryptids cryptids={this.props.cryptids} />
-                <CryptidForm />
+                <Route exact path="/cryptids/new" component={CryptidForm} />
+                <Route exact path="/cryptids" render={() => <Cryptids cryptids={this.props.cryptids} />}/>                
             </div>
         )
     }
