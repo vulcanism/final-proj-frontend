@@ -3,9 +3,9 @@ import {connect} from "react-redux";
 import {fetchCryptids} from "../actions/fetchCryptids";
 import {Route} from "react-router-dom"
 
-import Cryptids from "../components/Cryptids";
-import CryptidForm from "../components/CryptidForm";
-import Cryptid from "../components/Cryptid";
+import Cryptids from "../components/Cryptids/Cryptids";
+import CryptidForm from "../components/Cryptids/CryptidForm";
+import Cryptid from "../components/Cryptids/Cryptid";
 
 class CryptidsContainer extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {addCryptid} from "../actions/addCryptid";
+import {addCryptid} from "../../actions/addCryptid";
 
 class CryptidForm extends React.Component {
 
