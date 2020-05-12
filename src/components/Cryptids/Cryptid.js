@@ -8,7 +8,7 @@ const Cryptid = (props) => {
     return (
         <div>
             <h2>{cryptid ? cryptid.name : null}</h2>
-            <SightingsContainer />
+            <SightingsContainer cryptid={cryptid} />
         </div>
     )
 }
