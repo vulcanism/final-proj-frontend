@@ -1,4 +1,5 @@
 import React from "react";
+import SightingsContainer from "../../containers/SightingsContainer"
 
 const Cryptid = (props) => {
 
@@ -7,6 +8,7 @@ const Cryptid = (props) => {
     return (
         <div>
             <h2>{cryptid ? cryptid.name : null}</h2>
+            <SightingsContainer />
         </div>
     )
 }
