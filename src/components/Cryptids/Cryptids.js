@@ -1,8 +1,7 @@
 import React from "react";
 import Cryptid from "./Cryptid"
-import {Route} from "react-router-dom"
+import {Route, Link} from "react-router-dom"
 import {connect} from "react-redux";
-import {Link} from "react-router-dom";
 
 const Cryptids = (props) => {                  
     
@@ -10,7 +9,9 @@ const Cryptids = (props) => {
             <div>
                 <h2>Cryptids</h2>
                 {props.cryptids.map(cryptid => 
-                <div key={cryptid.id}><Cryptid cryptid={cryptid}/></div> )}                                    
+                <li key={cryptid.id}>
+                    <Link to={`cryptids/${cryptid.id}`}>{cryptid.name}</Link>
+                </li> )}                                    
             </div>
         )
     
