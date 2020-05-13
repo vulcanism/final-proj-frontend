@@ -18,7 +18,12 @@ class SightingForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        // addSighting(this.state, this.props.id)
+        this.props.addSighting(this.state, this.props.cryptid.id)
+        this.setState({
+            date: "",
+            location: "",
+            note: ""
+        })
     }
 
     render() {
@@ -39,4 +44,4 @@ class SightingForm extends React.Component {
     }
 }
 
-export default connect()(SightingForm);
+export default connect(null, {addSighting})(SightingForm);

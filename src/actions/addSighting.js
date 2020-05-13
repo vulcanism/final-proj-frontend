@@ -8,6 +8,6 @@ export const addSighting = (sighting, cryptidId) => {
             body: JSON.stringify(sighting)
         })
         .then(response => response.json())
-        .then(sighting => dispatch({type: "ADD_SIGHTING", payload: sighting}))
+        .then(cryptid => dispatch({type: "ADD_SIGHTING", payload: cryptid}))
     }
 }
