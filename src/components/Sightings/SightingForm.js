@@ -1,5 +1,6 @@
 import React from "react";
 import {connect} from "react-redux"
+import { addSighting } from "../../actions/addSighting";
 
 class SightingForm extends React.Component {
 
@@ -17,7 +18,7 @@ class SightingForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
+        // addSighting(this.state, this.props.id)
     }
 
     render() {
