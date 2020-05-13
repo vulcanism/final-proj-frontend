@@ -7,7 +7,7 @@ class SightingsContainer extends React.Component {
     render() {
         return (
             <div>
-                <SightingForm/>
+                <SightingForm cryptid={this.props.cryptid}/>
                 <Sightings sightings={this.props.cryptid && this.props.cryptid.sightings}/>
             </div>
         )

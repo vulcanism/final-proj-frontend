@@ -3,16 +3,35 @@ import {connect} from "react-redux"
 
 class SightingForm extends React.Component {
 
+    state = {
+        date: "",
+        location: "",
+        note: ""
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Date: </label>
-                    <input type="date" placeholder="Date"/><br/>
+                    <input type="date" placeholder="Date" value={this.state.date} name="date" onChange={this.handleChange}/><br/>
                     <label>Location: </label>
-                    <input type="text" placeholder="Location" name="location"/><br/>
+                    <input type="text" placeholder="Location" value={this.state.location} name="location" onChange={this.handleChange}/><br/>
                     <label>Note: </label>
-                    <textarea/>
+                    <textarea value={this.state.note} name="note" onChange={this.handleChange}/><br/>
+
+                    <input type="submit"/>
                 </form>
             </div>
         )
