@@ -7,9 +7,12 @@ class SightingForm extends React.Component {
         return (
             <div>
                 <form>
-                    <label>Date:</label>
-                    <label>Location:</label>
-                    <label>Note:</label>
+                    <label>Date: </label>
+                    <input type="date" placeholder="Date"/><br/>
+                    <label>Location: </label>
+                    <input type="text" placeholder="Location" name="location"/><br/>
+                    <label>Note: </label>
+                    <textarea/>
                 </form>
             </div>
         )
