@@ -8,7 +8,15 @@ export default function cryptidReducer(state = {cryptids: []}, action ) {
             return {...state, cryptids: [...state.cryptids, action.payload]}
 
         case "ADD_SIGHTING":
-            return {}
+            let cryptids = state.cryptids.map(cryptid => {
+                if (cryptid.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return cryptid
+                }
+            })
+            return {...state, cryptids: cryptids}
+            
 
     
         default:
