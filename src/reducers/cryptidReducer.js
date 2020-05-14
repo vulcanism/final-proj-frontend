@@ -17,7 +17,7 @@ export default function cryptidReducer(state = {cryptids: []}, action ) {
             })
             return {...state, cryptids: cryptids}
 
-        case "DELETE_TRANSACTION":
+        case "DELETE_SIGHTING":
             let cryptids2 = state.cryptids.map(cryptid => {
                 if (cryptid.id === action.payload.id) {
                     return action.payload

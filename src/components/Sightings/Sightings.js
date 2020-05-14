@@ -1,9 +1,11 @@
 import React from "react";
+import {connect} from "react-redux";
+import {deleteSighting} from "../../actions/deleteSighting"
 
 const Sightings = (props) => {
 
     const handleDelete = (sighting) => {
-        
+        props.deleteSighting(sighting.id, sighting.cryptid_id)        
     }
 
     return (
@@ -11,11 +13,11 @@ const Sightings = (props) => {
             {props.sightings && props.sightings.map(sighting => 
                 <li key={sighting.id}>
                     {sighting.date} - {sighting.location}
-                    <button onClick={handleDelete}>Delete</button>                    
+                    <button onClick={() => handleDelete(sighting)}>Delete</button>                    
                 </li>            
             )}
         </div>
     )
 }
 
-export default Sightings;
+export default connect(null, {deleteSighting})(Sightings);
