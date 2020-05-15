@@ -18,7 +18,8 @@ class CryptidEdit extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.editCryptid(this.state)
+        let cryptid = {...this.state, id: this.props.cryptid.id}
+        this.props.editCryptid(cryptid)
         this.setState({
             name: "",
             size: "",

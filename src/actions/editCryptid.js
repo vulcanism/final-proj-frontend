@@ -5,7 +5,7 @@ export const editCryptid = (data) => {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            method: "UPDATE",
+            method: "PATCH",
             body: JSON.stringify(data)
         })
         .then(response => response.json())
