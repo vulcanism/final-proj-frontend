@@ -12,7 +12,7 @@ const Cryptid = (props) => {
             <h3>{cryptid ? cryptid.size : null} - {cryptid ? cryptid.classification : null}</h3>
             <h4>Add new sighting</h4>
             <SightingsContainer cryptid={cryptid} /><br/>
-            <CryptidEdit />
+            <CryptidEdit cryptid={cryptid} />
         </div>
     )
 }
