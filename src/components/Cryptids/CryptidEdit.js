@@ -3,12 +3,13 @@ import {connect} from "react-redux";
 import {editCryptid} from "../../actions/editCryptid";
 
 class CryptidEdit extends React.Component {
+    
 
     state = {
         name: "",
         size: "",
-        classification: ""
-    }
+        classification: ""        
+    }    
 
     handleChange = (event) => {
         this.setState({
