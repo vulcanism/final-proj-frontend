@@ -36,6 +36,16 @@ export default function cryptidReducer(state = {cryptids: []}, action ) {
                 }
             })
             return {...state, cryptids: cryptids3}
+
+        case "DELETE_CRYPTID":
+            let cryptids4 = state.cryptids.map(cryptid => {
+                if (cryptid.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return cryptid
+                }
+            })
+            return {...state, cryptids: cryptids4}
             
 
     
