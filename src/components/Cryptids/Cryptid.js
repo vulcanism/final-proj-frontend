@@ -1,6 +1,6 @@
 import React from "react";
 import SightingsContainer from "../../containers/SightingsContainer"
-import CryptidEdit from "./CryptidEdit"
+import {Link} from "react-router-dom"
 
 const Cryptid = (props) => {
 
@@ -12,7 +12,7 @@ const Cryptid = (props) => {
             <h3>{cryptid ? cryptid.size : null} - {cryptid ? cryptid.classification : null}</h3>
             <h4>Add new sighting</h4>
             <SightingsContainer cryptid={cryptid} /><br/>
-            <CryptidEdit cryptid={cryptid} />
+            {/* <Link className="btn" to={`/cryptids/${props.match.params.id}/edit`}>Edit</Link>             */}
         </div>
     )
 }
