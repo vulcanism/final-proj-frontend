@@ -6,7 +6,7 @@ import {Route} from "react-router-dom"
 import Cryptids from "../components/Cryptids/Cryptids";
 import CryptidForm from "../components/Cryptids/CryptidForm";
 import Cryptid from "../components/Cryptids/Cryptid";
-import CryptidEdit from "../components/Cryptids/CryptidEdit";
+// import CryptidEdit from "../components/Cryptids/CryptidEdit";
 
 class CryptidsContainer extends React.Component {
 
