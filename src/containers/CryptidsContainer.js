@@ -1,7 +1,8 @@
 import React from "react";
 import {connect} from "react-redux";
-import {fetchCryptids} from "../actions/fetchCryptids";
 import {Route} from "react-router-dom"
+import {fetchCryptids} from "../actions/fetchCryptids";
+import {deleteCryptid} from "../actions/deleteCryptid";
 
 import Cryptids from "../components/Cryptids/Cryptids";
 import CryptidForm from "../components/Cryptids/CryptidForm";
@@ -19,7 +20,8 @@ class CryptidsContainer extends React.Component {
             <div>
                 {/* <Route exact path="/cryptids/new" component={CryptidForm} />                 */}
                 {/* <Route exact path="/cryptids/:id/edit" render={(routerProps) => <CryptidEdit {...routerProps} cryptids={this.props.cryptids} />}/> */}
-                <Route exact path="/cryptids" render={(routerProps) => <Cryptids {...routerProps} cryptids={this.props.cryptids} />}/>
+                {/* <Route exact path="/cryptids" render={(routerProps) => <Cryptids {...routerProps} cryptids={this.props.cryptids} />}/> */}
+                <Cryptids cryptids={this.props.cryptids} deleteCryptid={this.props.deleteCryptid}/>
                 <Route exact path="/cryptids/:id" render={(routerProps) => <Cryptid {...routerProps} cryptids={this.props.cryptids} />}/>             
             </div>
         )
