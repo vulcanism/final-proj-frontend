@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 import {connect} from "react-redux";
 import {deleteCryptid} from "../../actions/deleteCryptid";
 
-const Cryptid = (props) => {
+const Cryptid = (props) => {    
 
     let cryptid = props.cryptids.filter(cryptid => cryptid.id == props.match.params.id)[0]
 
@@ -24,4 +24,8 @@ const Cryptid = (props) => {
     )
 }
 
-export default connect(null, {deleteCryptid})(Cryptid);
+const mapDispatchToProps = (dispatch) => ({    
+    deleteCryptid: (id) => dispatch(deleteCryptid(id))
+})
+
+export default connect(null, mapDispatchToProps)(Cryptid);

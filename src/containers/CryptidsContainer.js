@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {Route} from "react-router-dom"
 import {fetchCryptids} from "../actions/fetchCryptids";
 import {deleteCryptid} from "../actions/deleteCryptid";
+import {fetchCryptid} from "../actions/fetchCryptid";
 
 import Cryptids from "../components/Cryptids/Cryptids";
 import CryptidForm from "../components/Cryptids/CryptidForm";
@@ -12,7 +13,7 @@ import Cryptid from "../components/Cryptids/Cryptid";
 class CryptidsContainer extends React.Component {
 
     componentDidMount() {
-        this.props.fetchCryptids()        
+        this.props.fetchCryptids()           
     }
     
     render() {
@@ -22,7 +23,7 @@ class CryptidsContainer extends React.Component {
                 {/* <Route exact path="/cryptids/:id/edit" render={(routerProps) => <CryptidEdit {...routerProps} cryptids={this.props.cryptids} />}/> */}
                 {/* <Route exact path="/cryptids" render={(routerProps) => <Cryptids {...routerProps} cryptids={this.props.cryptids} />}/> */}
                 <Cryptids cryptids={this.props.cryptids} deleteCryptid={this.props.deleteCryptid}/>
-                <Route exact path="/cryptids/:id" render={(routerProps) => <Cryptid {...routerProps} cryptids={this.props.cryptids} />}/>             
+                <Route exact path="/cryptids/:id" render={(routerProps) => <Cryptid {...routerProps} cryptids={this.props.cryptids} />}/>                
             </div>
         )
     }
@@ -35,7 +36,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchCryptids: () => dispatch(fetchCryptids())
+    fetchCryptids: () => dispatch(fetchCryptids()),
+    deleteCryptid: (id) => dispatch(deleteCryptid(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CryptidsContainer)
