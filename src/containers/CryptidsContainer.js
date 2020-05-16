@@ -37,6 +37,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
     fetchCryptids: () => dispatch(fetchCryptids()),
+    fetchCryptid: (id) => dispatch(fetchCryptid(id)),
     deleteCryptid: (id) => dispatch(deleteCryptid(id))
 })
 
