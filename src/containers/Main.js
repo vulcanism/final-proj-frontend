@@ -21,7 +21,7 @@ class Main extends Component {
 
     render() {
         const {cryptids} = this.props;
-        console.log(this.props.cryptids)
+        
         return (
             <div>
                 <NavBar />

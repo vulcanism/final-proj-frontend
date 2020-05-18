@@ -1,4 +1,4 @@
-export const deleteCryptid = (cryptidId) => {
+export const deleteCryptid = (cryptidId, history) => {
     return (dispatch) => {
         return fetch(`http://localhost:3000/cryptids/${cryptidId}`, {
             method: "DELETE"
