@@ -2,17 +2,17 @@ import React from "react";
 import {connect} from "react-redux";
 import {deleteSighting} from "../../actions/deleteSighting"
 
-const Sightings = (props) => {
-
+const Sightings = (props) => {      
+    
     const handleDelete = (sighting) => {
         props.deleteSighting(sighting.id, sighting.cryptid_id)        
     }
 
     return (
-        <div>
+        <div>            
             {props.sightings && props.sightings.map(sighting => 
                 <li key={sighting.id}>
-                    {sighting.date} - {sighting.location}
+                    { (new Date(sighting.date)).toLocaleDateString() } - {sighting.location}
                     <button onClick={() => handleDelete(sighting)}>Delete</button>                    
                 </li>            
             )}
