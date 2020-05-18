@@ -27,8 +27,9 @@ class CryptidForm extends React.Component {
     }
 
     render() {
-        return (
+        return (            
             <div className="cryptid-form">
+                <h3>Add Cryptid</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>Name: </label>
                     <input type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/><br/>
