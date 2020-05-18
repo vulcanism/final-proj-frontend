@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import Home from "../components/Home";
 import NavBar from "../components/NavBar";
 import {connect} from "react-redux";
@@ -25,6 +25,7 @@ class Main extends Component {
         return (
             <div>
                 <NavBar />
+                <Switch>
                 <Route exact path="/" render={Home}/>
                 <Route exact path="/cryptids/new" component={CryptidForm} />
                 <Route exact path="/cryptids" component={CryptidsContainer} />
@@ -35,6 +36,7 @@ class Main extends Component {
                 }} />
                 {/* <Route exact path="/cryptids/:id" render={() => <Cryptid cryptids={this.props.cryptids} />} /> */}
                 {/* <Route exact path="/cryptids/:id" render={(routerProps) => <Cryptid {...routerProps} cryptids={this.props.cryptids} />}/> */}
+                </Switch>
             </div>
         )
     }
