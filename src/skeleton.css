@@ -49,9 +49,6 @@
   font-size: 1.8rem;
 }
 
-a {
-  text-decoration: none;
-}
 
 /* Skeleton starts here */
 
@@ -186,9 +183,16 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #1EAEDB; 
+  text-decoration: none;
+  -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;}
+
 a:hover {
-  color: #0FA0CE; }
+  color: #167d9d; }
 
 
 /* Buttons
@@ -336,7 +340,8 @@ ol ul {
   font-size: 90%; }
 li {
   margin-bottom: 2rem;
-  text-align: center; }
+  text-align: center; 
+  font-size: 1.7rem; }
 
 
 /* Code

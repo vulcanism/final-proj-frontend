@@ -7,11 +7,13 @@ const Cryptids = (props) => {
     
         return (            
             <div>
-                <h2>Cryptids</h2>
+                <h3>Cryptids</h3>
+                <ul>
                 {props.cryptids.map(cryptid => 
                 <li key={cryptid.id}>
                     <Link to={`cryptids/${cryptid.id}`}>{cryptid.name}</Link>
-                </li> )}                                                    
+                </li> )}
+                </ul>                                                    
             </div>
         )
     
