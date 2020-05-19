@@ -1,5 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
+import {compose} from "redux";
+import {withRouter} from "react-router-dom";
 import {addCryptid} from "../../actions/addCryptid";
 
 class CryptidForm extends React.Component {
@@ -24,6 +26,7 @@ class CryptidForm extends React.Component {
             size: "",
             classification: ""
         })
+        this.props.history.push("/cryptids")        
     }
 
     render() {
@@ -48,4 +51,8 @@ class CryptidForm extends React.Component {
     }
 }
 
-export default connect(null, {addCryptid})(CryptidForm)
+export default compose(
+    withRouter,
+    connect(null, {addCryptid})
+)(CryptidForm);
+// connect(null, {addCryptid})(CryptidForm)

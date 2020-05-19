@@ -9,9 +9,9 @@ const Cryptid = ({ cryptid, deleteCryptid }) => {
     // let cryptid = props.cryptids.filter(cryptid => cryptid.id == props.match.params.id)[0]
 
     const handleDelete = (cryptid) => {
-       deleteCryptid(cryptid.id)        
-    }        
-
+       deleteCryptid(cryptid.id)               
+    }   
+    
     return (        
         <div>
             <h2>{cryptid ? cryptid.name : null}</h2>
