@@ -28,18 +28,23 @@ class SightingForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
+            <div class="row">
+                <div class="six columns">                
                     <label>Date: </label>
-                    <input type="date" placeholder="Date" value={this.state.date} name="date" onChange={this.handleChange}/><br/>
+                    <input type="date" class="u-full-width" placeholder="Date" value={this.state.date} name="date" onChange={this.handleChange}/><br/>
+                    </div>
+                    <div class="six columns">
                     <label>Location: </label>
-                    <input type="text" placeholder="Location" value={this.state.location} name="location" onChange={this.handleChange}/><br/>
+                    <input type="text" class="u-full-width" placeholder="Location" value={this.state.location} name="location" onChange={this.handleChange}/><br/>
+                    </div>
+                    </div>
                     <label>Note: </label>
-                    <textarea value={this.state.note} name="note" onChange={this.handleChange}/><br/>
+                    <textarea class="u-full-width" value={this.state.note} name="note" onChange={this.handleChange}/><br/>
 
-                    <input type="submit"/>
-                </form>
-            </div>
+                    <input type="submit"/>                
+                
+        </form>
         )
     }
 }

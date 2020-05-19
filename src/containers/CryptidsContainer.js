@@ -18,8 +18,7 @@ class CryptidsContainer extends React.Component {
     
     render() {
         return (
-            <div>
-                {/* <Route exact path="/cryptids/new" component={CryptidForm} />                 */}
+            <div class="container">                
                 {/* <Route exact path="/cryptids/:id/edit" render={(routerProps) => <CryptidEdit {...routerProps} cryptids={this.props.cryptids} />}/> */}
                 {/* <Route exact path="/cryptids" render={(routerProps) => <Cryptids {...routerProps} cryptids={this.props.cryptids} />}/> */}
                 <Cryptids cryptids={this.props.cryptids} deleteCryptid={this.props.deleteCryptid}/>

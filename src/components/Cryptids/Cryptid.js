@@ -18,13 +18,15 @@ const Cryptid = ({ cryptid, deleteCryptid, history }) => {
     }    
     
     return (        
-        <div>
+        <div class="container">
+            
             <h2>{cryptid ? cryptid.name : null}</h2>
             <h3>{cryptid ? cryptid.size : null} - {cryptid ? cryptid.classification : null}</h3>
-            <h4>Add new sighting</h4>
+            <h5>Add new sighting</h5>
             <SightingsContainer cryptid={cryptid} /><br/>            
             <button className="btn" onClick={() => handleDelete(cryptid)}>Delete Cryptid</button>
             {/* <Link className="btn" to={`/cryptids/${props.match.params.id}/edit`}>Edit</Link>             */}
+            
         </div>
     )
 }

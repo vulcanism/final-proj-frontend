@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import Main from "./containers/Main";
-import './App.css';
+import './skeleton.css';
 
 class App extends Component {
 
