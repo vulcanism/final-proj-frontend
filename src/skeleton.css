@@ -38,6 +38,22 @@
   transform: translate(-50%, -50%);
 }
 
+.topnav-container {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.topnav {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Skeleton starts here */
 
 .container {
   position: relative;
