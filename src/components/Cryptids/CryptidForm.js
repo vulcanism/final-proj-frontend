@@ -30,23 +30,33 @@ class CryptidForm extends React.Component {
     }
 
     render() {
-        return (            
-            <div className="cryptid-form">
-                <h3>Add Cryptid</h3>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Name: </label>
-                    <input type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/><br/>
+        return (
+            <form onSubmit={this.handleSubmit}>
+            <div class="container">
+                        
+                <div class="row">
+                    <h3>Add Cryptid</h3>
+                        <div class="one-third column">                
+                        <label>Name: </label>
+                        <input type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/><br/>
+                        </div>
 
-                    <label>Size: </label>
-                    <input type="text" placeholder="Size" value={this.state.size} name="size" onChange={this.handleChange}/><br/>
+                        <div class="one-third column">
+                        <label>Size: </label>
+                        <input type="text" placeholder="Size" value={this.state.size} name="size" onChange={this.handleChange}/><br/>
+                        </div>
+                        
+                        <label>Classification: </label>
+                        <input type="text" placeholder="Classification" value={this.state.classification} name="classification" onChange={this.handleChange}/><br/>
+                </div>                           
 
-                    <label>Classification: </label>
-                    <input type="text" placeholder="Classification" value={this.state.classification} name="classification" onChange={this.handleChange}/><br/>
+            </div>  {/*  container ends here */}
 
-                    <input type="submit"/>
-                </form>
-                
-            </div>
+            <div class="center-button">
+            <input type="submit"/>
+            </div>            
+                    
+            </form>            
         )
     }
 }
