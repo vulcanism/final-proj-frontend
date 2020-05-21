@@ -38,16 +38,16 @@ class CryptidForm extends React.Component {
                     <h3>Add Cryptid</h3>
                         <div class="one-third column">                
                         <label>Name: </label>
-                        <input type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/><br/>
+                        <input required type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/><br/>
                         </div>
 
                         <div class="one-third column">
                         <label>Size: </label>
-                        <input type="text" placeholder="Size" value={this.state.size} name="size" onChange={this.handleChange}/><br/>
+                        <input required type="text" placeholder="Size" value={this.state.size} name="size" onChange={this.handleChange}/><br/>
                         </div>
                         
                         <label>Classification: </label>
-                        <input type="text" placeholder="Classification" value={this.state.classification} name="classification" onChange={this.handleChange}/><br/>
+                        <input required type="text" placeholder="Classification" value={this.state.classification} name="classification" onChange={this.handleChange}/><br/>
                 </div>                           
 
             </div>  {/*  container ends here */}

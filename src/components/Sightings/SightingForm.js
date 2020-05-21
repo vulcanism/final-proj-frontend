@@ -32,11 +32,11 @@ class SightingForm extends React.Component {
             <div class="row">
                 <div class="six columns">                
                     <label>Date: </label>
-                    <input type="date" class="u-full-width" placeholder="Date" value={this.state.date} name="date" onChange={this.handleChange}/><br/>
+                    <input required type="date" class="u-full-width" placeholder="Date" value={this.state.date} name="date" onChange={this.handleChange}/><br/>
                     </div>
                     <div class="six columns">
                     <label>Location: </label>
-                    <input type="text" class="u-full-width" placeholder="Location" value={this.state.location} name="location" onChange={this.handleChange}/><br/>
+                    <input required type="text" class="u-full-width" placeholder="Location" value={this.state.location} name="location" onChange={this.handleChange}/><br/>
                     </div>
                     </div>
                     <label>Note: </label>
