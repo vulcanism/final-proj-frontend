@@ -12,9 +12,9 @@ import Cryptid from "../components/Cryptids/Cryptid";
 
 class CryptidsContainer extends React.Component {
 
-    componentDidMount() {
-        this.props.fetchCryptids()           
-    }
+    // componentDidMount() {
+    //     this.props.fetchCryptids()           
+    // }
     
     render() {
         return (
@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchCryptids: () => dispatch(fetchCryptids()),
+    // fetchCryptids: () => dispatch(fetchCryptids()),
     fetchCryptid: (id) => dispatch(fetchCryptid(id)),
     deleteCryptid: (id) => dispatch(deleteCryptid(id))
 })
